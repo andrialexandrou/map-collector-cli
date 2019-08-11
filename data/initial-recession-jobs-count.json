@@ -1,0 +1,1459 @@
+{
+  "Anniston-Oxford-Jacksonville, AL": {
+    "id": "01115000000000001",
+    "value": "53.6"
+  },
+  "Auburn-Opelika, AL": {
+    "id": "01122200000000001",
+    "value": "53.8"
+  },
+  "Birmingham-Hoover, AL": {
+    "id": "01138200000000001",
+    "value": "534.9"
+  },
+  "Decatur, AL": {
+    "id": "01194600000000001",
+    "value": "58.0"
+  },
+  "Dothan, AL": {
+    "id": "01200200000000001",
+    "value": "63.6"
+  },
+  "Florence-Muscle Shoals, AL": {
+    "id": "01225200000000001",
+    "value": "57.0"
+  },
+  "Gadsden, AL": {
+    "id": "01234600000000001",
+    "value": "38.3"
+  },
+  "Huntsville, AL": {
+    "id": "01266200000000001",
+    "value": "207.4"
+  },
+  "Mobile, AL": {
+    "id": "01336600000000001",
+    "value": "182.0"
+  },
+  "Montgomery, AL": {
+    "id": "01338600000000001",
+    "value": "176.4"
+  },
+  "Tuscaloosa, AL": {
+    "id": "01462200000000001",
+    "value": "99.9"
+  },
+  "Anchorage, AK": {
+    "id": "02112600000000001",
+    "value": "166.5"
+  },
+  "Fairbanks, AK": {
+    "id": "02218200000000001",
+    "value": "38.2"
+  },
+  "Flagstaff, AZ": {
+    "id": "04223800000000001",
+    "value": "65.3"
+  },
+  "Lake Havasu City-Kingman, AZ": {
+    "id": "04294200000000001",
+    "value": "55.2"
+  },
+  "Phoenix-Mesa-Scottsdale, AZ": {
+    "id": "04380600000000001",
+    "value": "1902.0"
+  },
+  "Prescott, AZ": {
+    "id": "04391400000000001",
+    "value": "65.1"
+  },
+  "Tucson, AZ": {
+    "id": "04460600000000001",
+    "value": "385.5"
+  },
+  "Yuma, AZ": {
+    "id": "04497400000000001",
+    "value": "52.8"
+  },
+  "Fayetteville-Springdale-Rogers, AR-MO": {
+    "id": "05222200000000001",
+    "value": "207.4"
+  },
+  "Fort Smith, AR-OK": {
+    "id": "05229000000000001",
+    "value": "119.5"
+  },
+  "Hot Springs, AR": {
+    "id": "05263000000000001",
+    "value": "39.0"
+  },
+  "Jonesboro, AR": {
+    "id": "05278600000000001",
+    "value": "49.1"
+  },
+  "Little Rock-North Little Rock-Conway, AR": {
+    "id": "05307800000000001",
+    "value": "343.5"
+  },
+  "Pine Bluff, AR": {
+    "id": "05382200000000001",
+    "value": "39.2"
+  },
+  "undefined": {
+    "id": "53451040000000001",
+    "value": "281.5"
+  },
+  "Bakersfield, CA": {
+    "id": "06125400000000001",
+    "value": "241.4"
+  },
+  "Chico, CA": {
+    "id": "06170200000000001",
+    "value": "77.2"
+  },
+  "El Centro, CA": {
+    "id": "06209400000000001",
+    "value": "48.2"
+  },
+  "Fresno, CA": {
+    "id": "06234200000000001",
+    "value": "315.6"
+  },
+  "Hanford-Corcoran, CA": {
+    "id": "06252600000000001",
+    "value": "36.5"
+  },
+  "Los Angeles-Long Beach-Anaheim, CA": {
+    "id": "06310800000000001",
+    "value": "5777.4"
+  },
+  "Madera, CA": {
+    "id": "06314600000000001",
+    "value": "35.8"
+  },
+  "Merced, CA": {
+    "id": "06329000000000001",
+    "value": "60.5"
+  },
+  "Modesto, CA": {
+    "id": "06337000000000001",
+    "value": "164.3"
+  },
+  "Napa, CA": {
+    "id": "06349000000000001",
+    "value": "63.9"
+  },
+  "Oxnard-Thousand Oaks-Ventura, CA": {
+    "id": "06371000000000001",
+    "value": "299.0"
+  },
+  "Redding, CA": {
+    "id": "06398200000000001",
+    "value": "66.8"
+  },
+  "Riverside-San Bernardino-Ontario, CA": {
+    "id": "06401400000000001",
+    "value": "1288.1"
+  },
+  "Sacramento--Roseville--Arden-Arcade, CA": {
+    "id": "06409000000000001",
+    "value": "919.9"
+  },
+  "Salinas, CA": {
+    "id": "06415000000000001",
+    "value": "130.6"
+  },
+  "San Diego-Carlsbad, CA": {
+    "id": "06417400000000001",
+    "value": "1319.5"
+  },
+  "San Francisco-Oakland-Hayward, CA": {
+    "id": "06418600000000001",
+    "value": "2057.6"
+  },
+  "San Jose-Sunnyvale-Santa Clara, CA": {
+    "id": "06419400000000001",
+    "value": "911.8"
+  },
+  "San Luis Obispo-Paso Robles-Arroyo Grande, CA": {
+    "id": "06420200000000001",
+    "value": "103.7"
+  },
+  "Santa Cruz-Watsonville, CA": {
+    "id": "06421000000000001",
+    "value": "97.1"
+  },
+  "Santa Maria-Santa Barbara, CA": {
+    "id": "06422000000000001",
+    "value": "173.0"
+  },
+  "Santa Rosa, CA": {
+    "id": "06422200000000001",
+    "value": "189.3"
+  },
+  "Stockton-Lodi, CA": {
+    "id": "06447000000000001",
+    "value": "215.0"
+  },
+  "Vallejo-Fairfield, CA": {
+    "id": "06467000000000001",
+    "value": "129.6"
+  },
+  "Visalia-Porterville, CA": {
+    "id": "06473000000000001",
+    "value": "115.6"
+  },
+  "Yuba City, CA": {
+    "id": "06497000000000001",
+    "value": "43.1"
+  },
+  "Boulder, CO": {
+    "id": "08145000000000001",
+    "value": "163.5"
+  },
+  "Colorado Springs, CO": {
+    "id": "08178200000000001",
+    "value": "258.5"
+  },
+  "Denver-Aurora-Lakewood, CO": {
+    "id": "08197400000000001",
+    "value": "1226.7"
+  },
+  "Fort Collins, CO": {
+    "id": "08226600000000001",
+    "value": "134.8"
+  },
+  "Grand Junction, CO": {
+    "id": "08243000000000001",
+    "value": "61.0"
+  },
+  "Greeley, CO": {
+    "id": "08245400000000001",
+    "value": "80.6"
+  },
+  "Pueblo, CO": {
+    "id": "08393800000000001",
+    "value": "57.7"
+  },
+  "Bridgeport-Stamford-Norwalk, CT NECTA": {
+    "id": "09719500000000001",
+    "value": "412.3"
+  },
+  "Danbury, CT NECTA": {
+    "id": "09728500000000001",
+    "value": "77.5"
+  },
+  "Hartford-West Hartford-East Hartford, CT NECTA": {
+    "id": "09734500000000001",
+    "value": "563.7"
+  },
+  "New Haven, CT NECTA": {
+    "id": "09757000000000001",
+    "value": "278.4"
+  },
+  "Norwich-New London-Westerly, CT-RI NECTA": {
+    "id": "09764500000000001",
+    "value": "138.1"
+  },
+  "Waterbury, CT NECTA": {
+    "id": "09787000000000001",
+    "value": "72.1"
+  },
+  "Dover, DE": {
+    "id": "10201000000000001",
+    "value": "66.9"
+  },
+  "Washington-Arlington-Alexandria, DC-VA-MD-WV": {
+    "id": "11479000000000001",
+    "value": "3006.2"
+  },
+  "Cape Coral-Fort Myers, FL": {
+    "id": "12159800000000001",
+    "value": "234.5"
+  },
+  "Crestview-Fort Walton Beach-Destin, FL": {
+    "id": "12188800000000001",
+    "value": "107.5"
+  },
+  "Deltona-Daytona Beach-Ormond Beach, FL": {
+    "id": "12196600000000001",
+    "value": "190.1"
+  },
+  "Gainesville, FL": {
+    "id": "12235400000000001",
+    "value": "133.2"
+  },
+  "Jacksonville, FL": {
+    "id": "12272600000000001",
+    "value": "630.2"
+  },
+  "Lakeland-Winter Haven, FL": {
+    "id": "12294600000000001",
+    "value": "210.4"
+  },
+  "Miami-Fort Lauderdale-West Palm Beach, FL": {
+    "id": "12331000000000001",
+    "value": "2421.4"
+  },
+  "Naples-Immokalee-Marco Island, FL": {
+    "id": "12349400000000001",
+    "value": "132.8"
+  },
+  "North Port-Sarasota-Bradenton, FL": {
+    "id": "12358400000000001",
+    "value": "278.3"
+  },
+  "Ocala, FL": {
+    "id": "12361000000000001",
+    "value": "106.7"
+  },
+  "Orlando-Kissimmee-Sanford, FL": {
+    "id": "12367400000000001",
+    "value": "1078.0"
+  },
+  "Palm Bay-Melbourne-Titusville, FL": {
+    "id": "12373400000000001",
+    "value": "214.4"
+  },
+  "Panama City, FL": {
+    "id": "12374600000000001",
+    "value": "81.0"
+  },
+  "Pensacola-Ferry Pass-Brent, FL": {
+    "id": "12378600000000001",
+    "value": "171.8"
+  },
+  "Port St. Lucie, FL": {
+    "id": "12389400000000001",
+    "value": "136.0"
+  },
+  "Punta Gorda, FL": {
+    "id": "12394600000000001",
+    "value": "46.0"
+  },
+  "Sebastian-Vero Beach, FL": {
+    "id": "12426800000000001",
+    "value": "50.4"
+  },
+  "Tallahassee, FL": {
+    "id": "12452200000000001",
+    "value": "176.2"
+  },
+  "Tampa-St. Petersburg-Clearwater, FL": {
+    "id": "12453000000000001",
+    "value": "1236.4"
+  },
+  "Albany, GA": {
+    "id": "13105000000000001",
+    "value": "65.0"
+  },
+  "Athens-Clarke County, GA": {
+    "id": "13120200000000001",
+    "value": "89.0"
+  },
+  "Atlanta-Sandy Springs-Roswell, GA": {
+    "id": "13120600000000001",
+    "value": "2450.8"
+  },
+  "Augusta-Richmond County, GA-SC": {
+    "id": "13122600000000001",
+    "value": "220.0"
+  },
+  "Brunswick, GA": {
+    "id": "13152600000000001",
+    "value": "44.9"
+  },
+  "Columbus, GA-AL": {
+    "id": "13179800000000001",
+    "value": "122.2"
+  },
+  "Dalton, GA": {
+    "id": "13191400000000001",
+    "value": "79.3"
+  },
+  "Gainesville, GA": {
+    "id": "13235800000000001",
+    "value": "75.8"
+  },
+  "Hinesville, GA": {
+    "id": "13259800000000001",
+    "value": "18.3"
+  },
+  "Macon, GA": {
+    "id": "13314200000000001",
+    "value": "101.4"
+  },
+  "Rome, GA": {
+    "id": "13406600000000001",
+    "value": "42.1"
+  },
+  "Savannah, GA": {
+    "id": "13423400000000001",
+    "value": "160.9"
+  },
+  "Valdosta, GA": {
+    "id": "13466600000000001",
+    "value": "56.6"
+  },
+  "Warner Robins, GA": {
+    "id": "13475800000000001",
+    "value": "69.9"
+  },
+  "Urban Honolulu, HI": {
+    "id": "15465200000000001",
+    "value": "453.5"
+  },
+  "Boise City, ID": {
+    "id": "16142600000000001",
+    "value": "277.6"
+  },
+  "Coeur d'Alene, ID": {
+    "id": "16176600000000001",
+    "value": "56.2"
+  },
+  "Idaho Falls, ID": {
+    "id": "16268200000000001",
+    "value": "59.5"
+  },
+  "Lewiston, ID-WA": {
+    "id": "16303000000000001",
+    "value": "27.4"
+  },
+  "Pocatello, ID": {
+    "id": "16385400000000001",
+    "value": "36.7"
+  },
+  "Bloomington, IL": {
+    "id": "17140100000000001",
+    "value": "95.8"
+  },
+  "Champaign-Urbana, IL": {
+    "id": "17165800000000001",
+    "value": "112.1"
+  },
+  "Chicago-Naperville-Elgin, IL-IN-WI": {
+    "id": "17169800000000001",
+    "value": "4545.7"
+  },
+  "Danville, IL": {
+    "id": "17191800000000001",
+    "value": "31.4"
+  },
+  "Davenport-Moline-Rock Island, IA-IL": {
+    "id": "17193400000000001",
+    "value": "188.1"
+  },
+  "Decatur, IL": {
+    "id": "17195000000000001",
+    "value": "55.0"
+  },
+  "Kankakee, IL": {
+    "id": "17281000000000001",
+    "value": "44.3"
+  },
+  "Peoria, IL": {
+    "id": "17379000000000001",
+    "value": "186.5"
+  },
+  "Rockford, IL": {
+    "id": "17404200000000001",
+    "value": "161.2"
+  },
+  "Springfield, IL": {
+    "id": "17441000000000001",
+    "value": "111.8"
+  },
+  "Bloomington, IN": {
+    "id": "18140200000000001",
+    "value": "75.5"
+  },
+  "Columbus, IN": {
+    "id": "18180200000000001",
+    "value": "45.0"
+  },
+  "Elkhart-Goshen, IN": {
+    "id": "18211400000000001",
+    "value": "128.0"
+  },
+  "Evansville, IN-KY": {
+    "id": "18217800000000001",
+    "value": "156.8"
+  },
+  "Fort Wayne, IN": {
+    "id": "18230600000000001",
+    "value": "219.5"
+  },
+  "Indianapolis-Carmel-Anderson, IN": {
+    "id": "18269000000000001",
+    "value": "948.6"
+  },
+  "Kokomo, IN": {
+    "id": "18290200000000001",
+    "value": "42.8"
+  },
+  "Lafayette-West Lafayette, IN": {
+    "id": "18292000000000001",
+    "value": "94.1"
+  },
+  "Michigan City-La Porte, IN": {
+    "id": "18331400000000001",
+    "value": "47.0"
+  },
+  "Muncie, IN": {
+    "id": "18346200000000001",
+    "value": "53.6"
+  },
+  "South Bend-Mishawaka, IN-MI": {
+    "id": "18437800000000001",
+    "value": "144.1"
+  },
+  "Terre Haute, IN": {
+    "id": "18454600000000001",
+    "value": "74.3"
+  },
+  "Ames, IA": {
+    "id": "19111800000000001",
+    "value": "47.8"
+  },
+  "Cedar Rapids, IA": {
+    "id": "19163000000000001",
+    "value": "136.4"
+  },
+  "Des Moines-West Des Moines, IA": {
+    "id": "19197800000000001",
+    "value": "319.9"
+  },
+  "Dubuque, IA": {
+    "id": "19202200000000001",
+    "value": "55.6"
+  },
+  "Iowa City, IA": {
+    "id": "19269800000000001",
+    "value": "88.8"
+  },
+  "Sioux City, IA-NE-SD": {
+    "id": "19435800000000001",
+    "value": "84.9"
+  },
+  "Waterloo-Cedar Falls, IA": {
+    "id": "19479400000000001",
+    "value": "89.3"
+  },
+  "Lawrence, KS": {
+    "id": "20299400000000001",
+    "value": "51.6"
+  },
+  "Topeka, KS": {
+    "id": "20458200000000001",
+    "value": "108.3"
+  },
+  "Wichita, KS": {
+    "id": "20486200000000001",
+    "value": "300.3"
+  },
+  "Bowling Green, KY": {
+    "id": "21145400000000001",
+    "value": "68.4"
+  },
+  "Elizabethtown-Fort Knox, KY": {
+    "id": "21210600000000001",
+    "value": "52.0"
+  },
+  "Lexington-Fayette, KY": {
+    "id": "21304600000000001",
+    "value": "254.3"
+  },
+  "Louisville/Jefferson County, KY-IN": {
+    "id": "21311400000000001",
+    "value": "611.2"
+  },
+  "Owensboro, KY": {
+    "id": "21369800000000001",
+    "value": "51.0"
+  },
+  "Alexandria, LA": {
+    "id": "22107800000000001",
+    "value": "65.2"
+  },
+  "Baton Rouge, LA": {
+    "id": "22129400000000001",
+    "value": "366.7"
+  },
+  "Houma-Thibodaux, LA": {
+    "id": "22263800000000001",
+    "value": "94.9"
+  },
+  "Lafayette, LA": {
+    "id": "22291800000000001",
+    "value": "207.9"
+  },
+  "Lake Charles, LA": {
+    "id": "22293400000000001",
+    "value": "92.9"
+  },
+  "Monroe, LA": {
+    "id": "22337400000000001",
+    "value": "78.6"
+  },
+  "New Orleans-Metairie, LA": {
+    "id": "22353800000000001",
+    "value": "518.5"
+  },
+  "Shreveport-Bossier City, LA": {
+    "id": "22433400000000001",
+    "value": "187.6"
+  },
+  "Bangor, ME NECTA": {
+    "id": "23707500000000001",
+    "value": "66.0"
+  },
+  "Lewiston-Auburn, ME NECTA": {
+    "id": "23746500000000001",
+    "value": "49.4"
+  },
+  "Portland-South Portland, ME NECTA": {
+    "id": "23767500000000001",
+    "value": "194.4"
+  },
+  "Baltimore-Columbia-Towson, MD": {
+    "id": "24125800000000001",
+    "value": "1318.0"
+  },
+  "Cumberland, MD-WV": {
+    "id": "24190600000000001",
+    "value": "39.3"
+  },
+  "Hagerstown-Martinsburg, MD-WV": {
+    "id": "24251800000000001",
+    "value": "101.8"
+  },
+  "Barnstable Town, MA NECTA": {
+    "id": "25709000000000001",
+    "value": "101.8"
+  },
+  "Boston-Cambridge-Nashua, MA-NH NECTA": {
+    "id": "25716500000000001",
+    "value": "2473.0"
+  },
+  "Leominster-Gardner, MA NECTA": {
+    "id": "25745000000000001",
+    "value": "51.3"
+  },
+  "New Bedford, MA NECTA": {
+    "id": "25755500000000001",
+    "value": "62.4"
+  },
+  "Pittsfield, MA NECTA": {
+    "id": "25766000000000001",
+    "value": "43.7"
+  },
+  "Springfield, MA-CT NECTA": {
+    "id": "25781000000000001",
+    "value": "319.7"
+  },
+  "Worcester, MA-CT NECTA": {
+    "id": "25796000000000001",
+    "value": "269.3"
+  },
+  "Ann Arbor, MI": {
+    "id": "26114600000000001",
+    "value": "203.0"
+  },
+  "Battle Creek, MI": {
+    "id": "26129800000000001",
+    "value": "58.4"
+  },
+  "Bay City, MI": {
+    "id": "26130200000000001",
+    "value": "38.4"
+  },
+  "Detroit-Warren-Dearborn, MI": {
+    "id": "26198200000000001",
+    "value": "1974.6"
+  },
+  "Flint, MI": {
+    "id": "26224200000000001",
+    "value": "152.4"
+  },
+  "Grand Rapids-Wyoming, MI": {
+    "id": "26243400000000001",
+    "value": "489.9"
+  },
+  "Jackson, MI": {
+    "id": "26271000000000001",
+    "value": "59.5"
+  },
+  "Kalamazoo-Portage, MI": {
+    "id": "26280200000000001",
+    "value": "145.9"
+  },
+  "Lansing-East Lansing, MI": {
+    "id": "26296200000000001",
+    "value": "225.5"
+  },
+  "Monroe, MI": {
+    "id": "26337800000000001",
+    "value": "43.6"
+  },
+  "Muskegon, MI": {
+    "id": "26347400000000001",
+    "value": "65.7"
+  },
+  "Niles-Benton Harbor, MI": {
+    "id": "26356600000000001",
+    "value": "63.8"
+  },
+  "Saginaw, MI": {
+    "id": "26409800000000001",
+    "value": "91.3"
+  },
+  "Duluth, MN-WI": {
+    "id": "27202600000000001",
+    "value": "134.0"
+  },
+  "Mankato-North Mankato, MN": {
+    "id": "27318600000000001",
+    "value": "54.5"
+  },
+  "Minneapolis-St. Paul-Bloomington, MN-WI": {
+    "id": "27334600000000001",
+    "value": "1846.2"
+  },
+  "Rochester, MN": {
+    "id": "27403400000000001",
+    "value": "113.4"
+  },
+  "St. Cloud, MN": {
+    "id": "27410600000000001",
+    "value": "103.1"
+  },
+  "Gulfport-Biloxi-Pascagoula, MS": {
+    "id": "28250600000000001",
+    "value": "156.7"
+  },
+  "Hattiesburg, MS": {
+    "id": "28256200000000001",
+    "value": "60.8"
+  },
+  "Jackson, MS": {
+    "id": "28271400000000001",
+    "value": "269.1"
+  },
+  "Cape Girardeau, MO-IL": {
+    "id": "29160200000000001",
+    "value": "45.8"
+  },
+  "Columbia, MO": {
+    "id": "29178600000000001",
+    "value": "89.8"
+  },
+  "Jefferson City, MO": {
+    "id": "29276200000000001",
+    "value": "79.1"
+  },
+  "Joplin, MO": {
+    "id": "29279000000000001",
+    "value": "79.5"
+  },
+  "Kansas City, MO-KS": {
+    "id": "29281400000000001",
+    "value": "999.4"
+  },
+  "St. Joseph, MO-KS": {
+    "id": "29411400000000001",
+    "value": "59.0"
+  },
+  "St. Louis, MO-IL": {
+    "id": "29411800000000001",
+    "value": "1345.7"
+  },
+  "Springfield, MO": {
+    "id": "29441800000000001",
+    "value": "198.0"
+  },
+  "Billings, MT": {
+    "id": "30137400000000001",
+    "value": "79.3"
+  },
+  "Great Falls, MT": {
+    "id": "30245000000000001",
+    "value": "34.8"
+  },
+  "Missoula, MT": {
+    "id": "30335400000000001",
+    "value": "57.0"
+  },
+  "Lincoln, NE": {
+    "id": "31307000000000001",
+    "value": "172.4"
+  },
+  "Omaha-Council Bluffs, NE-IA": {
+    "id": "31365400000000001",
+    "value": "461.3"
+  },
+  "Carson City, NV": {
+    "id": "32161800000000001",
+    "value": "33.2"
+  },
+  "Las Vegas-Henderson-Paradise, NV": {
+    "id": "32298200000000001",
+    "value": "922.8"
+  },
+  "Reno, NV": {
+    "id": "32399000000000001",
+    "value": "224.6"
+  },
+  "Dover-Durham, NH-ME NECTA": {
+    "id": "33730500000000001",
+    "value": "49.1"
+  },
+  "Manchester, NH NECTA": {
+    "id": "33749500000000001",
+    "value": "103.0"
+  },
+  "Portsmouth, NH-ME NECTA": {
+    "id": "33769000000000001",
+    "value": "82.3"
+  },
+  "Atlantic City-Hammonton, NJ": {
+    "id": "34121000000000001",
+    "value": "151.5"
+  },
+  "Ocean City, NJ": {
+    "id": "34361400000000001",
+    "value": "44.2"
+  },
+  "Trenton, NJ": {
+    "id": "34459400000000001",
+    "value": "238.5"
+  },
+  "Vineland-Bridgeton, NJ": {
+    "id": "34472200000000001",
+    "value": "62.4"
+  },
+  "Albuquerque, NM": {
+    "id": "35107400000000001",
+    "value": "396.0"
+  },
+  "Farmington, NM": {
+    "id": "35221400000000001",
+    "value": "51.0"
+  },
+  "Las Cruces, NM": {
+    "id": "35297400000000001",
+    "value": "67.5"
+  },
+  "Santa Fe, NM": {
+    "id": "35421400000000001",
+    "value": "66.3"
+  },
+  "Albany-Schenectady-Troy, NY": {
+    "id": "36105800000000001",
+    "value": "444.5"
+  },
+  "Binghamton, NY": {
+    "id": "36137800000000001",
+    "value": "114.4"
+  },
+  "Buffalo-Cheektowaga-Niagara Falls, NY": {
+    "id": "36153800000000001",
+    "value": "544.9"
+  },
+  "Elmira, NY": {
+    "id": "36213000000000001",
+    "value": "40.2"
+  },
+  "Glens Falls, NY": {
+    "id": "36240200000000001",
+    "value": "55.9"
+  },
+  "Ithaca, NY": {
+    "id": "36270600000000001",
+    "value": "57.1"
+  },
+  "Kingston, NY": {
+    "id": "36287400000000001",
+    "value": "63.5"
+  },
+  "New York-Newark-Jersey City, NY-NJ-PA": {
+    "id": "36356200000000001",
+    "value": "8828.6"
+  },
+  "Rochester, NY": {
+    "id": "36403800000000001",
+    "value": "520.8"
+  },
+  "Syracuse, NY": {
+    "id": "36450600000000001",
+    "value": "319.6"
+  },
+  "Utica-Rome, NY": {
+    "id": "36465400000000001",
+    "value": "132.6"
+  },
+  "Asheville, NC": {
+    "id": "37117000000000001",
+    "value": "174.2"
+  },
+  "Burlington, NC": {
+    "id": "37155000000000001",
+    "value": "61.6"
+  },
+  "Charlotte-Concord-Gastonia, NC-SC": {
+    "id": "37167400000000001",
+    "value": "1011.9"
+  },
+  "Durham-Chapel Hill, NC": {
+    "id": "37205000000000001",
+    "value": "276.8"
+  },
+  "Fayetteville, NC": {
+    "id": "37221800000000001",
+    "value": "125.9"
+  },
+  "Goldsboro, NC": {
+    "id": "37241400000000001",
+    "value": "44.3"
+  },
+  "Greensboro-High Point, NC": {
+    "id": "37246600000000001",
+    "value": "369.0"
+  },
+  "Greenville, NC": {
+    "id": "37247800000000001",
+    "value": "74.4"
+  },
+  "Hickory-Lenoir-Morganton, NC": {
+    "id": "37258600000000001",
+    "value": "163.2"
+  },
+  "Jacksonville, NC": {
+    "id": "37273400000000001",
+    "value": "44.8"
+  },
+  "Raleigh, NC": {
+    "id": "37395800000000001",
+    "value": "508.2"
+  },
+  "Rocky Mount, NC": {
+    "id": "37405800000000001",
+    "value": "66.2"
+  },
+  "Wilmington, NC": {
+    "id": "37489000000000001",
+    "value": "115.6"
+  },
+  "Winston-Salem, NC": {
+    "id": "37491800000000001",
+    "value": "260.9"
+  },
+  "Bismarck, ND": {
+    "id": "38139000000000001",
+    "value": "61.8"
+  },
+  "Fargo, ND-MN": {
+    "id": "38220200000000001",
+    "value": "116.2"
+  },
+  "Grand Forks, ND-MN": {
+    "id": "38242200000000001",
+    "value": "53.3"
+  },
+  "Akron, OH": {
+    "id": "39104200000000001",
+    "value": "338.8"
+  },
+  "Canton-Massillon, OH": {
+    "id": "39159400000000001",
+    "value": "173.2"
+  },
+  "Cincinnati, OH-KY-IN": {
+    "id": "39171400000000001",
+    "value": "1039.9"
+  },
+  "Cleveland-Elyria, OH": {
+    "id": "39174600000000001",
+    "value": "1076.8"
+  },
+  "Columbus, OH": {
+    "id": "39181400000000001",
+    "value": "959.0"
+  },
+  "Dayton, OH": {
+    "id": "39193800000000001",
+    "value": "393.3"
+  },
+  "Lima, OH": {
+    "id": "39306200000000001",
+    "value": "56.1"
+  },
+  "Mansfield, OH": {
+    "id": "39319000000000001",
+    "value": "57.9"
+  },
+  "Springfield, OH": {
+    "id": "39442200000000001",
+    "value": "53.3"
+  },
+  "Toledo, OH": {
+    "id": "39457800000000001",
+    "value": "313.4"
+  },
+  "Weirton-Steubenville, WV-OH": {
+    "id": "39482600000000001",
+    "value": "47.6"
+  },
+  "Youngstown-Warren-Boardman, OH-PA": {
+    "id": "39496600000000001",
+    "value": "241.6"
+  },
+  "Lawton, OK": {
+    "id": "40300200000000001",
+    "value": "43.4"
+  },
+  "Oklahoma City, OK": {
+    "id": "40364200000000001",
+    "value": "571.8"
+  },
+  "Tulsa, OK": {
+    "id": "40461400000000001",
+    "value": "429.1"
+  },
+  "Bend-Redmond, OR": {
+    "id": "41134600000000001",
+    "value": "71.8"
+  },
+  "Corvallis, OR": {
+    "id": "41187000000000001",
+    "value": "38.2"
+  },
+  "Eugene, OR": {
+    "id": "41216600000000001",
+    "value": "156.5"
+  },
+  "Medford, OR": {
+    "id": "41327800000000001",
+    "value": "84.3"
+  },
+  "Portland-Vancouver-Hillsboro, OR-WA": {
+    "id": "41389000000000001",
+    "value": "1037.2"
+  },
+  "Salem, OR": {
+    "id": "41414200000000001",
+    "value": "151.8"
+  },
+  "Allentown-Bethlehem-Easton, PA-NJ": {
+    "id": "42109000000000001",
+    "value": "343.8"
+  },
+  "Altoona, PA": {
+    "id": "42110200000000001",
+    "value": "62.5"
+  },
+  "Erie, PA": {
+    "id": "42215000000000001",
+    "value": "133.2"
+  },
+  "Harrisburg-Carlisle, PA": {
+    "id": "42254200000000001",
+    "value": "333.1"
+  },
+  "Johnstown, PA": {
+    "id": "42277800000000001",
+    "value": "61.5"
+  },
+  "Lancaster, PA": {
+    "id": "42295400000000001",
+    "value": "237.4"
+  },
+  "Lebanon, PA": {
+    "id": "42301400000000001",
+    "value": "49.8"
+  },
+  "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD": {
+    "id": "42379800000000001",
+    "value": "2808.7"
+  },
+  "Pittsburgh, PA": {
+    "id": "42383000000000001",
+    "value": "1143.3"
+  },
+  "Reading, PA": {
+    "id": "42397400000000001",
+    "value": "175.0"
+  },
+  "Scranton--Wilkes-Barre--Hazleton, PA": {
+    "id": "42425400000000001",
+    "value": "262.3"
+  },
+  "State College, PA": {
+    "id": "42443000000000001",
+    "value": "73.2"
+  },
+  "Williamsport, PA": {
+    "id": "42487000000000001",
+    "value": "53.8"
+  },
+  "York-Hanover, PA": {
+    "id": "42496200000000001",
+    "value": "182.3"
+  },
+  "Providence-Warwick, RI-MA NECTA": {
+    "id": "44772000000000001",
+    "value": "587.7"
+  },
+  "Charleston-North Charleston, SC": {
+    "id": "45167000000000001",
+    "value": "297.3"
+  },
+  "Columbia, SC": {
+    "id": "45179000000000001",
+    "value": "365.2"
+  },
+  "Florence, SC": {
+    "id": "45225000000000001",
+    "value": "85.8"
+  },
+  "Greenville-Anderson-Mauldin, SC": {
+    "id": "45248600000000001",
+    "value": "376.5"
+  },
+  "Myrtle Beach-Conway-North Myrtle Beach, SC-NC": {
+    "id": "45348200000000001",
+    "value": "156.5"
+  },
+  "Spartanburg, SC": {
+    "id": "45439000000000001",
+    "value": "136.7"
+  },
+  "Sumter, SC": {
+    "id": "45449400000000001",
+    "value": "40.4"
+  },
+  "Rapid City, SD": {
+    "id": "46396600000000001",
+    "value": "62.6"
+  },
+  "Sioux Falls, SD": {
+    "id": "46436200000000001",
+    "value": "131.5"
+  },
+  "Chattanooga, TN-GA": {
+    "id": "47168600000000001",
+    "value": "247.2"
+  },
+  "Clarksville, TN-KY": {
+    "id": "47173000000000001",
+    "value": "82.9"
+  },
+  "Cleveland, TN": {
+    "id": "47174200000000001",
+    "value": "42.4"
+  },
+  "Jackson, TN": {
+    "id": "47271800000000001",
+    "value": "65.1"
+  },
+  "Johnson City, TN": {
+    "id": "47277400000000001",
+    "value": "79.4"
+  },
+  "Kingsport-Bristol-Bristol, TN-VA": {
+    "id": "47287000000000001",
+    "value": "121.6"
+  },
+  "Knoxville, TN": {
+    "id": "47289400000000001",
+    "value": "370.0"
+  },
+  "Memphis, TN-MS-AR": {
+    "id": "47328200000000001",
+    "value": "640.6"
+  },
+  "Morristown, TN": {
+    "id": "47341000000000001",
+    "value": "47.3"
+  },
+  "Nashville-Davidson--Murfreesboro--Franklin, TN": {
+    "id": "47349800000000001",
+    "value": "788.8"
+  },
+  "Abilene, TX": {
+    "id": "48101800000000001",
+    "value": "65.7"
+  },
+  "Amarillo, TX": {
+    "id": "48111000000000001",
+    "value": "112.8"
+  },
+  "Austin-Round Rock, TX": {
+    "id": "48124200000000001",
+    "value": "754.4"
+  },
+  "Beaumont-Port Arthur, TX": {
+    "id": "48131400000000001",
+    "value": "165.8"
+  },
+  "Brownsville-Harlingen, TX": {
+    "id": "48151800000000001",
+    "value": "122.0"
+  },
+  "College Station-Bryan, TX": {
+    "id": "48177800000000001",
+    "value": "92.8"
+  },
+  "Corpus Christi, TX": {
+    "id": "48185800000000001",
+    "value": "175.7"
+  },
+  "Dallas-Fort Worth-Arlington, TX": {
+    "id": "48191000000000001",
+    "value": "2960.0"
+  },
+  "El Paso, TX": {
+    "id": "48213400000000001",
+    "value": "270.4"
+  },
+  "Houston-The Woodlands-Sugar Land, TX": {
+    "id": "48264200000000001",
+    "value": "2537.9"
+  },
+  "Killeen-Temple, TX": {
+    "id": "48286600000000001",
+    "value": "122.0"
+  },
+  "Laredo, TX": {
+    "id": "48297000000000001",
+    "value": "86.7"
+  },
+  "Longview, TX": {
+    "id": "48309800000000001",
+    "value": "94.1"
+  },
+  "Lubbock, TX": {
+    "id": "48311800000000001",
+    "value": "128.5"
+  },
+  "McAllen-Edinburg-Mission, TX": {
+    "id": "48325800000000001",
+    "value": "209.4"
+  },
+  "Midland, TX": {
+    "id": "48332600000000001",
+    "value": "66.7"
+  },
+  "Odessa, TX": {
+    "id": "48362200000000001",
+    "value": "58.3"
+  },
+  "San Angelo, TX": {
+    "id": "48416600000000001",
+    "value": "45.3"
+  },
+  "San Antonio-New Braunfels, TX": {
+    "id": "48417000000000001",
+    "value": "832.8"
+  },
+  "Sherman-Denison, TX": {
+    "id": "48433000000000001",
+    "value": "43.5"
+  },
+  "Texarkana, TX-AR": {
+    "id": "48455000000000001",
+    "value": "60.9"
+  },
+  "Tyler, TX": {
+    "id": "48463400000000001",
+    "value": "96.5"
+  },
+  "Victoria, TX": {
+    "id": "48470200000000001",
+    "value": "41.2"
+  },
+  "Waco, TX": {
+    "id": "48473800000000001",
+    "value": "109.6"
+  },
+  "Wichita Falls, TX": {
+    "id": "48486600000000001",
+    "value": "62.3"
+  },
+  "Logan, UT-ID": {
+    "id": "49308600000000001",
+    "value": "51.9"
+  },
+  "Ogden-Clearfield, UT": {
+    "id": "49362600000000001",
+    "value": "219.3"
+  },
+  "Provo-Orem, UT": {
+    "id": "49393400000000001",
+    "value": "187.2"
+  },
+  "St. George, UT": {
+    "id": "49411000000000001",
+    "value": "52.6"
+  },
+  "Salt Lake City, UT": {
+    "id": "49416200000000001",
+    "value": "607.9"
+  },
+  "Burlington-South Burlington, VT NECTA": {
+    "id": "50724000000000001",
+    "value": "115.5"
+  },
+  "Blacksburg-Christiansburg-Radford, VA": {
+    "id": "51139800000000001",
+    "value": "74.9"
+  },
+  "Charlottesville, VA": {
+    "id": "51168200000000001",
+    "value": "104.9"
+  },
+  "Harrisonburg, VA": {
+    "id": "51255000000000001",
+    "value": "64.1"
+  },
+  "Lynchburg, VA": {
+    "id": "51313400000000001",
+    "value": "107.9"
+  },
+  "Richmond, VA": {
+    "id": "51400600000000001",
+    "value": "621.9"
+  },
+  "Roanoke, VA": {
+    "id": "51402200000000001",
+    "value": "163.6"
+  },
+  "Virginia Beach-Norfolk-Newport News, VA-NC": {
+    "id": "51472600000000001",
+    "value": "775.6"
+  },
+  "Winchester, VA-WV": {
+    "id": "51490200000000001",
+    "value": "58.6"
+  },
+  "Bellingham, WA": {
+    "id": "53133800000000001",
+    "value": "83.7"
+  },
+  "Bremerton-Silverdale, WA": {
+    "id": "53147400000000001",
+    "value": "86.4"
+  },
+  "Kennewick-Richland, WA": {
+    "id": "53284200000000001",
+    "value": "89.9"
+  },
+  "Longview, WA": {
+    "id": "53310200000000001",
+    "value": "38.5"
+  },
+  "Mount Vernon-Anacortes, WA": {
+    "id": "53345800000000001",
+    "value": "47.5"
+  },
+  "Olympia-Tumwater, WA": {
+    "id": "53365000000000001",
+    "value": "100.9"
+  },
+  "Seattle-Tacoma-Bellevue, WA": {
+    "id": "53426600000000001",
+    "value": "1731.4"
+  },
+  "Spokane-Spokane Valley, WA": {
+    "id": "53440600000000001",
+    "value": "232.5"
+  },
+  "Wenatchee, WA": {
+    "id": "53483000000000001",
+    "value": "39.3"
+  },
+  "Yakima, WA": {
+    "id": "53494200000000001",
+    "value": "79.0"
+  },
+  "Charleston, WV": {
+    "id": "54166200000000001",
+    "value": "127.1"
+  },
+  "Huntington-Ashland, WV-KY-OH": {
+    "id": "54265800000000001",
+    "value": "143.8"
+  },
+  "Morgantown, WV": {
+    "id": "54340600000000001",
+    "value": "60.6"
+  },
+  "Parkersburg-Vienna, WV": {
+    "id": "54376200000000001",
+    "value": "43.6"
+  },
+  "Wheeling, WV-OH": {
+    "id": "54485400000000001",
+    "value": "68.7"
+  },
+  "Appleton, WI": {
+    "id": "55115400000000001",
+    "value": "119.6"
+  },
+  "Eau Claire, WI": {
+    "id": "55207400000000001",
+    "value": "85.0"
+  },
+  "Fond du Lac, WI": {
+    "id": "55225400000000001",
+    "value": "48.6"
+  },
+  "Green Bay, WI": {
+    "id": "55245800000000001",
+    "value": "168.7"
+  },
+  "Janesville-Beloit, WI": {
+    "id": "55275000000000001",
+    "value": "70.0"
+  },
+  "La Crosse-Onalaska, WI-MN": {
+    "id": "55291000000000001",
+    "value": "75.1"
+  },
+  "Madison, WI": {
+    "id": "55315400000000001",
+    "value": "362.3"
+  },
+  "Milwaukee-Waukesha-West Allis, WI": {
+    "id": "55333400000000001",
+    "value": "860.8"
+  },
+  "Oshkosh-Neenah, WI": {
+    "id": "55367800000000001",
+    "value": "92.3"
+  },
+  "Racine, WI": {
+    "id": "55395400000000001",
+    "value": "80.3"
+  },
+  "Sheboygan, WI": {
+    "id": "55431000000000001",
+    "value": "65.2"
+  },
+  "Wausau, WI": {
+    "id": "55481400000000001",
+    "value": "74.8"
+  },
+  "Casper, WY": {
+    "id": "56162200000000001",
+    "value": "39.3"
+  },
+  "Cheyenne, WY": {
+    "id": "56169400000000001",
+    "value": "43.4"
+  },
+  "USA": {
+    "id": "CES0000000001",
+    "value": "138413"
+  }
+}
+  
