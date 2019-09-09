@@ -9,7 +9,6 @@ const argv = require('yargs')
 
 Promise.all([retrieve.employment(argv), retrieve.recovery(argv)])
   .then(([empRes, recRes]) => {
-    console.log('empRes', empRes);
     store.employment(empRes);
     store.recovery(recRes);
   })
