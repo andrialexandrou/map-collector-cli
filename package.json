@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "datapull": "node datapull",
+    "export": "node data/create-csv",
     "dp": "npm run datapull -- ",
     "lint": "prettier --single-quote es6 --write '**/*.js'"
   },
