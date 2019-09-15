@@ -13,7 +13,8 @@ function up() {
   return `CREATE TABLE recovery_data (
     "city_id" TEXT NOT NULL,
     "period" TEXT NOT NULL,
-    "value" REAL NOT NULL
+    "value" REAL NOT NULL,
+    CONSTRAINT recovery_data_pk PRIMARY KEY(city_id, period)
   );`;
 }
 function down() {

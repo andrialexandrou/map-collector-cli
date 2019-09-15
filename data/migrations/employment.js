@@ -14,7 +14,8 @@ function up() {
   return `CREATE TABLE employment_data (
     "city_id" TEXT NOT null,
     "period" TEXT NOT null,
-    "value" REAL NOT null
+    "value" REAL NOT null,
+    CONSTRAINT employment_data_pk PRIMARY KEY(city_id, period)
   );`;
 }
 function down() {
