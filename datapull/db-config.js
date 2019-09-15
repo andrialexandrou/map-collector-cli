@@ -20,11 +20,12 @@ sqlite3.Database.prototype.runBatchAsync = function (statements) {
       results.push(result);
       return db.runAsync(...[].concat(statement));
   }), Promise.resolve())
-  .catch(err => db.runAsync('ROLLBACK').then(() => Promise.reject(err +
-      ' in statement #' + results.length)))
   .then(() => {
     return 'Success'
-  });
+  })
+  .catch(err => {
+    console.error(err)
+  })
 };
 
 module.exports = db

@@ -47,7 +47,4 @@ function getIds() {
   })
 }
 
-
-
-
 module.exports = getIds();
