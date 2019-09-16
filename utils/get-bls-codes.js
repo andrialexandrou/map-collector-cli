@@ -42,8 +42,9 @@ function getIds() {
         recovery: matrixWithRecoveryPrefix,
         employment: matrixWithJobsPrefix
       })
+    }).catch( err => {
+      throw new Error(err)
     })
-
   })
 }
 

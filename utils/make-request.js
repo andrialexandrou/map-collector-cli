@@ -3,7 +3,12 @@ const ApiKeyHandler = require('./get-api-key');
 const apiKeyHandler = new ApiKeyHandler();
 const url = 'https://api.bls.gov/publicAPI/v2/timeseries/data/';
 
-const getYear = arg => (arg.length === 2 ? `20${arg}` : arg);
+const getYear = arg => {
+  if (arg.length < 4) {
+    throw new Error('Year must be in 4-number format.')
+  }
+  return Math.round(arg)
+};
 const getMonth = function(arg) {
   const months = {
     1: ['jan', 'january'],
@@ -29,6 +34,15 @@ let thisRequest;
 
 /* API Requests */
 function handleResponse(response) {
+  if (response.status !== 200) {
+    console.log('response.status', response.status)
+    throw new Error(response.status.message)
+  }
+  if (response.data && response.data.message) {
+    if (response.data.message.length > 0) {
+      console.log(response.data.message)
+    }
+  }
   if (response.data.status === 'REQUEST_NOT_PROCESSED') {
     apiKeyHandler.expire();
     makeRequest(...thisRequest);
@@ -44,19 +58,21 @@ function handleResponse(response) {
 function makeRequest(seriesArray, opts) {
   thisRequest = Array.from(arguments);
 
-  const year = getYear(opts.year.toString());
-  const prevYear = getYear((opts.year - 1).toString());
+  const year = getYear(opts.year);
 
   return axios
     .post(url, {
       seriesid: seriesArray,
       registrationkey: apiKeyHandler.get(),
-      startyear: prevYear,
+      startyear: year,
       endyear: year,
       annualaverage: true,
       calculations: true
     })
-    .then(handleResponse);
+    .then(handleResponse)
+    .catch(err => {
+      throw new Error(err)
+    });
 }
 
 module.exports = makeRequest;

@@ -2,7 +2,7 @@ const fs = require('fs');
 var path = require('path');
 const blsSecrets = require('../secrets/bls-keys.json');
 
-const configPath = path.join(__dirname, '../secrets/bls-keys.json');
+const configPath = path.join(__dirname, './secrets/bls-keys.json');
 
 module.exports = class ApiKey {
   constructor() {

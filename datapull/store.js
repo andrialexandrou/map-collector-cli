@@ -17,7 +17,12 @@ function calculateRecoveryPercentage(id, current) {
 /* End Recovery Calculations */
 
 /* Employment Calculations */
-const getEmploymentValue = row => row.calculations.net_changes[12]
+const getEmploymentValue = row => {
+  if (!row.calculations) {
+    return row.value
+  }
+  return row.calculations.net_changes[12]
+}
 
 function multiply(a, b) {
   const p = 100;
@@ -43,7 +48,6 @@ module.exports = {
   recovery: (data) => {
     const transformFunction = (val, id) => calculateRecoveryPercentage(id, getRecoveryValue(val))
     const transaction = createTransaction('recovery_data', transformFunction, data)
-    console.log("transaction", transaction)
     return performTransaction(transaction)
   },
   employment: (data) => {

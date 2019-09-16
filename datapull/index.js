@@ -6,26 +6,20 @@ const argv = require('yargs')
   .alias('m', 'month')
   .alias('y', 'year').argv;
 
-Promise.all([
-  retrieve.employment(argv),
-  retrieve.recovery(argv)
-])
-  .then(([
-    empRes, 
-    recRes
-  ]) => {
-    return Promise.all([
-      store.employment(empRes),
-      store.recovery(recRes)
-    ])
+// Promise.resolve()
+retrieve.employment(argv)
+  .then(store.employment)
+  .then(res => {
+    console.log('Completing Employment Pull')
+    console.log(res)
   })
-  .then(([
-    empRes, 
-    recRes
-  ]) => {
-    console.log('Employment Pull', empRes)
-    console.log('Recovery Pull', recRes)
+  .then( () => retrieve.recovery(argv))
+  .then(store.recovery)
+  .then(res => {
+    console.log('Completing Recovery Pull')
+    console.log(res)
   })
-  .catch(err => {
-    throw new Error(err);
-  });
+  .catch( err => {
+    console.log('Catch from Employment or Recovery Pull')
+    throw new Error(err)
+  })

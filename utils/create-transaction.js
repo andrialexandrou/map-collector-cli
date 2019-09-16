@@ -1,7 +1,6 @@
 const flatten = require('lodash.flatten');
 const isEqual = require('lodash.isequal');
 const originalRecoveryMap = require('./initialRecessionJobsCount')
-const missingRecessionData = []
 
 module.exports = {
     getPeriodName,
@@ -34,11 +33,29 @@ function multiply(a, b) {
 }
 /* End Employment Calculations */
 
+const months = {
+  'January': '0',
+  'February': '1',
+  'March': '2',
+  'April': '3',
+  'May': '4',
+  'June': '5',
+  'July': '6',
+  'August': '7',
+  'September': '8',
+  'October': '9',
+  'November': '10',
+  'December': '11',
+};
 function getPeriodName(month, year) {
-  return `${month.slice(0,3)}-${year.slice(-2)}`
+  if (month === 'Annual') return
+  const dateObject = new Date(year, months[month], 02)
+  return dateObject.toISOString().split('T')[0];
 }
 getPeriodName.test = () => {
-  console.assert(getPeriodName('August', '2019') === 'Aug-19', 'should be Aug-19')
+  console.assert(getPeriodName('January', '2019') === '2019-01-01', 'should be 2019-01-01')
+  console.assert(getPeriodName('August', '2019') === '2019-08-01', 'should be 2019-08-31')
+  console.assert(getPeriodName('Annual', '2019') === undefined, 'Annual should return undefined')
 }
 
 function createTransaction(tableName, transformFunction, rows) {
@@ -119,26 +136,26 @@ createTransaction.test = function() {
   }]
   const outputEmp = createTransaction('employment_data', val => multiply(getEmploymentValue(val), 1000), exampleReturn);
   console.assert(isEqual(outputEmp, [ 'BEGIN TRANSACTION;',
-  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "Jul-19", "700" ) ON CONFLICT (city_id, period) DO UPDATE SET value=700;',
-  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "Jun-19", "800" ) ON CONFLICT (city_id, period) DO UPDATE SET value=800;',
-  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "May-19", "900" ) ON CONFLICT (city_id, period) DO UPDATE SET value=900;',
+  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "2019-07-01", "700" ) ON CONFLICT (city_id, period) DO UPDATE SET value=700, period="2019-07-01";',
+  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "2019-06-01", "800" ) ON CONFLICT (city_id, period) DO UPDATE SET value=800, period="2019-06-01";',
+  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "2019-05-01", "900" ) ON CONFLICT (city_id, period) DO UPDATE SET value=900, period="2019-05-01";',
   'COMMIT;',
   'BEGIN TRANSACTION;',
-  'INSERT INTO employment_data (city_id, period, value) VALUES( "01338600000000001", "Jul-19", "400" ) ON CONFLICT (city_id, period) DO UPDATE SET value=400;',
-  'INSERT INTO employment_data (city_id, period, value) VALUES( "01338600000000001", "Jun-19", "500" ) ON CONFLICT (city_id, period) DO UPDATE SET value=500;',
-  'INSERT INTO employment_data (city_id, period, value) VALUES( "01338600000000001", "May-19", "600" ) ON CONFLICT (city_id, period) DO UPDATE SET value=600;',
+  'INSERT INTO employment_data (city_id, period, value) VALUES( "01338600000000001", "2019-07-01", "400" ) ON CONFLICT (city_id, period) DO UPDATE SET value=400, period="2019-07-01";',
+  'INSERT INTO employment_data (city_id, period, value) VALUES( "01338600000000001", "2019-06-01", "500" ) ON CONFLICT (city_id, period) DO UPDATE SET value=500, period="2019-06-01";',
+  'INSERT INTO employment_data (city_id, period, value) VALUES( "01338600000000001", "2019-05-01", "600" ) ON CONFLICT (city_id, period) DO UPDATE SET value=600, period="2019-05-01";',
   'COMMIT;' ]), 'should create employment transaction correctly')
   
   const outputRecov = createTransaction('recovery_data', (val, id) => calculateRecoveryPercentage(id, getRecoveryValue(val)), exampleReturn);
   console.assert(isEqual(outputRecov, [ 'BEGIN TRANSACTION;',
-  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "Jul-19", "-0.041538462" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.041538462;',
-  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "Jun-19", "-0.036923077" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.036923077;',
-  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "May-19", "-0.029230769" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.029230769;',
+  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "2019-07-01", "-0.041538462" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.041538462, period="2019-07-01";',
+  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "2019-06-01", "-0.036923077" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.036923077, period="2019-06-01";',
+  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "2019-05-01", "-0.029230769" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.029230769, period="2019-05-01";',
   'COMMIT;',
   'BEGIN TRANSACTION;',
-  'INSERT INTO recovery_data (city_id, period, value) VALUES( "01338600000000001", "Jul-19", "-0.646825397" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.646825397;',
-  'INSERT INTO recovery_data (city_id, period, value) VALUES( "01338600000000001", "Jun-19", "-0.645124717" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.645124717;',
-  'INSERT INTO recovery_data (city_id, period, value) VALUES( "01338600000000001", "May-19", "-0.642290249" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.642290249;',
+  'INSERT INTO recovery_data (city_id, period, value) VALUES( "01338600000000001", "2019-07-01", "-0.646825397" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.646825397, period="2019-07-01";',
+  'INSERT INTO recovery_data (city_id, period, value) VALUES( "01338600000000001", "2019-06-01", "-0.645124717" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.645124717, period="2019-06-01";',
+  'INSERT INTO recovery_data (city_id, period, value) VALUES( "01338600000000001", "2019-05-01", "-0.642290249" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.642290249, period="2019-05-01";',
   'COMMIT;' ]), 'should create recovery transaction correctly')
 }
 
@@ -153,15 +170,14 @@ function getIdName(id) {
 function createBigInsert(tableName, transformFunction, row) {
   function createInsert(id, period, value) {
 
-    return `INSERT INTO ${tableName} (city_id, period, value) VALUES( "${getIdName(id)}", "${period}", "${value}" ) ON CONFLICT (city_id, period) DO UPDATE SET value=${value};`;
+    return `INSERT INTO ${tableName} (city_id, period, value) VALUES( "${getIdName(id)}", "${period}", "${value}" ) ON CONFLICT (city_id, period) DO UPDATE SET value=${value}, period="${period}";`;
   }
   const valuesToAdd = row.data.map(datum => {
     const id = row.seriesID
     const period = getPeriodName(datum.periodName, datum.year)
     const value = transformFunction(datum, id)
-    if (!value || value === 'NaN') {
-      return;
-    }
+    if (!value || value === 'NaN') return
+    if (!period || period === 'NaN') return
     return createInsert(id, period, value )
   }).filter(xs => xs) // gets rid of empty values for when we couldn't calculate something
   return valuesToAdd;
@@ -202,15 +218,15 @@ createBigInsert.test = function() {
     } ]
   }
   const outputEmp = createBigInsert('employment_data', val => multiply(getEmploymentValue(val), 1000), exampleReturn);
-  console.assert(isEqual(outputEmp, [ 'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "Jul-19", "700" ) ON CONFLICT (city_id, period) DO UPDATE SET value=700;',
-  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "Jun-19", "700" ) ON CONFLICT (city_id, period) DO UPDATE SET value=700;',
-  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "May-19", "700" ) ON CONFLICT (city_id, period) DO UPDATE SET value=700;' ]), 
+  console.assert(isEqual(outputEmp, [ 'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "2019-07-01", "700" ) ON CONFLICT (city_id, period) DO UPDATE SET value=700, period="2019-07-01";',
+  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "2019-06-01", "700" ) ON CONFLICT (city_id, period) DO UPDATE SET value=700, period="2019-06-01";',
+  'INSERT INTO employment_data (city_id, period, value) VALUES( "13105000000000001", "2019-05-01", "700" ) ON CONFLICT (city_id, period) DO UPDATE SET value=700, period="2019-05-01";' ]), 
   'employment insert should be created correctly')
  
   const outputRecov = createBigInsert('recovery_data', (val, id) => calculateRecoveryPercentage(id, getRecoveryValue(val)), exampleReturn);
-  console.assert(isEqual(outputRecov, [ 'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "Jul-19", "-0.041538462" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.041538462;',
-  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "Jun-19", "-0.036923077" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.036923077;',
-  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "May-19", "-0.029230769" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.029230769;' ]), 
+  console.assert(isEqual(outputRecov, [ 'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "2019-07-01", "-0.041538462" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.041538462, period="2019-07-01";',
+  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "2019-06-01", "-0.036923077" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.036923077, period="2019-06-01";',
+  'INSERT INTO recovery_data (city_id, period, value) VALUES( "13105000000000001", "2019-05-01", "-0.029230769" ) ON CONFLICT (city_id, period) DO UPDATE SET value=-0.029230769, period="2019-05-01";' ]), 
   'recovery insert should be created correctly')
 }
 

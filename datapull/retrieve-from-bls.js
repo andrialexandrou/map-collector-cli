@@ -13,9 +13,11 @@ module.exports = {
       - takes results, flattens batches in preparation for consuming data
       - sends to <dataNormalize> module to append to existing CSV files
       */
-      return Promise.all(recoveryCodes.map(arr => makeRequest(arr, opts))).then(
-        flatten
-      );
+      return Promise.all(recoveryCodes.map(arr => makeRequest(arr, opts)));
+    })
+    .then(flatten)
+    .catch(err => {
+      throw new Error(err)
     })
   },
   employment: opts => {
@@ -28,9 +30,11 @@ module.exports = {
       - takes results, flattens batches in preparation for consuming data
       - sends to <dataNormalize> module to append to existing CSV files
       */
-      return Promise.all(employmentCodes.map(arr => makeRequest(arr, opts))).then(
-        flatten
-      );
+      return Promise.all(employmentCodes.map(arr => makeRequest(arr, opts)));
+    })
+    .then(flatten)
+    .catch(err => {
+      throw new Error(err)
     })
   }
 };
