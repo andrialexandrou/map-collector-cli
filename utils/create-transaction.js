@@ -169,15 +169,16 @@ function getIdName(id) {
 
 function createBigInsert(tableName, transformFunction, row) {
   function createInsert(id, period, value) {
-
     return `INSERT INTO ${tableName} (city_id, period, value) VALUES( "${getIdName(id)}", "${period}", "${value}" ) ON CONFLICT (city_id, period) DO UPDATE SET value=${value}, period="${period}";`;
   }
   const valuesToAdd = row.data.map(datum => {
     const id = row.seriesID
     const period = getPeriodName(datum.periodName, datum.year)
     const value = transformFunction(datum, id)
-    if (!value || value === 'NaN') return
     if (!period || period === 'NaN') return
+    if (value === 'NaN') {
+      throw new Error('Could not calculate a value for ' + id + ', period ' + period)
+    }
     return createInsert(id, period, value )
   }).filter(xs => xs) // gets rid of empty values for when we couldn't calculate something
   return valuesToAdd;

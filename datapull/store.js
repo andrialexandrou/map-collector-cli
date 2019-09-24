@@ -21,7 +21,14 @@ const getEmploymentValue = row => {
   if (!row.calculations) {
     return row.value
   }
-  return row.calculations.net_changes[12]
+  return row.calculations.net_changes[12] ||
+    // some values early in the employment dataset do not have the 12
+    // therefore we're getting whatever value there *does* exist.
+    // TODO discover if this is appropriate, or if this data needs to be ignored
+    // or otherwise calculated
+    row.calculations.net_changes[6] ||
+    row.calculations.net_changes[3] ||
+    row.calculations.net_changes[1]
 }
 
 function multiply(a, b) {
