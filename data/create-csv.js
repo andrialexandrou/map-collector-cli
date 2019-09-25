@@ -12,7 +12,7 @@ const months = {
   '1': 'Feb',
   '2': 'Mar',
   '3': 'Apr',
-  '4': 'Ma',
+  '4': 'May',
   '5': 'Jun',
   '6': 'Jul',
   '7': 'Aug',
