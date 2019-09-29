@@ -177,7 +177,7 @@ function createBigInsert(tableName, transformFunction, row) {
     const value = transformFunction(datum, id)
     if (!period || period === 'NaN') return
     if (value === 'NaN') {
-      throw new Error('Could not calculate a value for ' + id + ', period ' + period)
+      throw new Error('Could not calculate a value for ' + id + ', period ' + period + '\n' + JSON.stringify(datum, null, 2))
     }
     return createInsert(id, period, value )
   }).filter(xs => xs) // gets rid of empty values for when we couldn't calculate something

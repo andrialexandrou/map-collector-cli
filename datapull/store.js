@@ -8,6 +8,9 @@ const getRecoveryValue = row => row.value
 function calculateRecoveryPercentage(id, current) {
   const lookupId = id.includes('CES') ? id : id.slice(3)
   const original = originalRecoveryMap[lookupId] && originalRecoveryMap[lookupId].value
+  if (!original) {
+    throw new Error('No original data found for ' + id)
+  }
   const calculatedValue = id.includes('CES') ? // a ternary that can be converted back to an if statement
     Number(current) / Number(original):
     Number(current) / Number(original) - 1;
