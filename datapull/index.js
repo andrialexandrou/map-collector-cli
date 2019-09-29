@@ -1,25 +1,16 @@
-const retrieve = require('./retrieve-from-bls');
-const store = require('./store');
+const performPullAndDataStore = require('./procedure')
 
-const argv = require('yargs')
-  .usage('Usage: $0 --month [string] --year [num]')
-  .alias('m', 'month')
-  .alias('y', 'year').argv;
+if (process.env.NODE_ENV !== 'test') {
+  const argv = require('yargs')
+    .usage('Usage: npm run datapull -- --year [num]')
+    .option('year', {
+      alias: 'y',
+      describe: 'pick a year',
+      choices: [2017, 2018, 2019]
+    })
+    .demandOption(['year'])
+    .help()
+    .argv;
 
-// Promise.resolve()
-retrieve.employment(argv)
-  .then(store.employment)
-  .then(res => {
-    console.log('Completing Employment Pull')
-    console.log(res)
-  })
-  .then( () => retrieve.recovery(argv))
-  .then(store.recovery)
-  .then(res => {
-    console.log('Completing Recovery Pull')
-    console.log(res)
-  })
-  .catch( err => {
-    console.log('Catch from Employment or Recovery Pull')
-    throw new Error(err)
-  })
+  performPullAndDataStore(argv)
+}

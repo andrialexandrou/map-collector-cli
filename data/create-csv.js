@@ -31,6 +31,7 @@ function getPeriodName(dateObj) {
 getPeriodName.test = function() {
   console.assert(getPeriodName('1999-01-01') === 'Jan-99', 'assert its Jan-99')
   console.assert(getPeriodName('2018-04-01') === 'Apr-18', 'assert its Apr-18')
+  console.assert(getPeriodName('2007-01-01') === 'Jan-07', 'assert its Apr-18')
 }
 
 let db = new sqlite3.Database('./data/bls.db', sqlite3.OPEN_READWRITE, err => {
@@ -61,41 +62,43 @@ function flattenAndSave(filename, data) {
   writeToFile(filename, list);
 }
 
-db.parallelize(() => {
-  const citiesEmployment = {};
-  const citiesRecovery = {};
-  db.each(
-    'SELECT * FROM employment_data JOIN cities WHERE employment_data.city_id=cities.id ORDER BY date(period);',
-    (err, row) => {
-      if (citiesEmployment[row.city_id]) {
-      } else {
-        citiesEmployment[row.city_id] = row;
-      }
-      const period = getPeriodName(row.period)
-      citiesEmployment[row.city_id][period] = row.value;
-      delete citiesEmployment[row.city_id].value;
-    },
-    complete => {
-      flattenAndSave('employment', citiesEmployment);
-    }
-    );
-    
+if (process.env.NODE_ENV !== 'test') {
+  db.parallelize(() => {
+    const citiesEmployment = {};
+    const citiesRecovery = {};
     db.each(
-      'SELECT * FROM recovery_data JOIN cities WHERE recovery_data.city_id=cities.id ORDER BY date(period);',
+      'SELECT * FROM employment_data JOIN cities WHERE employment_data.city_id=cities.id ORDER BY date(period);',
       (err, row) => {
-        if (citiesRecovery[row.city_id]) {
+        if (citiesEmployment[row.city_id]) {
         } else {
-          citiesRecovery[row.city_id] = row;
+          citiesEmployment[row.city_id] = row;
         }
         const period = getPeriodName(row.period)
-        citiesRecovery[row.city_id][period] = row.value;
-        delete citiesRecovery[row.city_id].value;
+        citiesEmployment[row.city_id][period] = row.value;
+        delete citiesEmployment[row.city_id].value;
       },
       complete => {
-        flattenAndSave('recovery', citiesRecovery);
+        flattenAndSave('employment', citiesEmployment);
       }
-  );
-});
+      );
+      
+      db.each(
+        'SELECT * FROM recovery_data JOIN cities WHERE recovery_data.city_id=cities.id ORDER BY date(period);',
+        (err, row) => {
+          if (citiesRecovery[row.city_id]) {
+          } else {
+            citiesRecovery[row.city_id] = row;
+          }
+          const period = getPeriodName(row.period)
+          citiesRecovery[row.city_id][period] = row.value;
+          delete citiesRecovery[row.city_id].value;
+        },
+        complete => {
+          flattenAndSave('recovery', citiesRecovery);
+        }
+    );
+  });  
+}
 
 db.close(err => {
   if (err) console.error(err.message);
