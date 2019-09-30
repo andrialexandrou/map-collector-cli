@@ -24,14 +24,18 @@ const months = {
 
 function getPeriodName(dateObj) {
   const obj = new Date(dateObj)
+  // specifically for date interpretation on some Operating Systems
+  // who interpet the 1st of the month as the previous day,
+  // return a value that seems like the previous month
+  obj.setDate(15)
   const month = months[obj.getMonth()]
   const year = obj.getFullYear().toString().slice(-2)
   return `${month}-${year}`
 }
 getPeriodName.test = function() {
-  console.assert(getPeriodName('1999-01-01') === 'Jan-99', 'assert its Jan-99')
+  console.assert(getPeriodName('1999-01-03') === 'Jan-99', 'assert its Jan-99')
   console.assert(getPeriodName('2018-04-01') === 'Apr-18', 'assert its Apr-18')
-  console.assert(getPeriodName('2007-01-01') === 'Jan-07', 'assert its Apr-18')
+  console.assert(getPeriodName('2007-01-25') === 'Jan-07', 'assert its Apr-18')
 }
 
 let db = new sqlite3.Database('./data/bls.db', sqlite3.OPEN_READWRITE, err => {
