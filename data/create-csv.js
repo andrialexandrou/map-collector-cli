@@ -35,7 +35,7 @@ function getPeriodName(dateObj) {
 getPeriodName.test = function() {
   console.assert(getPeriodName('1999-01-03') === 'Jan-99', 'assert its Jan-99')
   console.assert(getPeriodName('2018-04-01') === 'Apr-18', 'assert its Apr-18')
-  console.assert(getPeriodName('2007-01-25') === 'Jan-07', 'assert its Apr-18')
+  console.assert(getPeriodName('2007-01-25') === 'Jan-07', 'assert its Jan-07')
 }
 
 let db = new sqlite3.Database('./data/bls.db', sqlite3.OPEN_READWRITE, err => {
