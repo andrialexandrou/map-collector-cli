@@ -5,9 +5,9 @@ const url = 'https://api.bls.gov/publicAPI/v2/timeseries/data/';
 
 const getYear = arg => {
   if (arg.length < 4) {
-    throw new Error('Year must be in 4-number format.')
+    throw new Error('Year must be in 4-number format.');
   }
-  return Math.round(arg)
+  return Math.round(arg);
 };
 const getMonth = function(arg) {
   const months = {
@@ -35,12 +35,12 @@ let thisRequest;
 /* API Requests */
 function handleResponse(response) {
   if (response.status !== 200) {
-    console.log('response.status', response.status)
-    throw new Error(response.status.message)
+    console.log('response.status', response.status);
+    throw new Error(response.status.message);
   }
   if (response.data && response.data.message) {
     if (response.data.message.length > 0) {
-      console.log(response.data.message)
+      console.log(response.data.message);
     }
   }
   if (response.data.status === 'REQUEST_NOT_PROCESSED') {
@@ -71,7 +71,7 @@ function makeRequest(seriesArray, opts) {
     })
     .then(handleResponse)
     .catch(err => {
-      throw new Error(err)
+      throw new Error(err);
     });
 }
 

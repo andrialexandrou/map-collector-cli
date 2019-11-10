@@ -1,19 +1,20 @@
-const db = require('./db-config')
-const originalRecoveryMap = require('../utils/initialRecessionJobsCount')
-const { createTransaction } = require('../utils/create-transaction')
+const db = require('./db-config');
+const originalRecoveryMap = require('../utils/initialRecessionJobsCount');
+const { createTransaction } = require('../utils/create-transaction');
 
 /* Recovery Calculations */
-const getRecoveryValue = row => row.value
+const getRecoveryValue = row => row.value;
 
 function calculateRecoveryPercentage(id, current) {
-  const lookupId = id.includes('CES') ? id : id.slice(3)
-  const original = originalRecoveryMap[lookupId] && originalRecoveryMap[lookupId].value
+  const lookupId = id.includes('CES') ? id : id.slice(3);
+  const original =
+    originalRecoveryMap[lookupId] && originalRecoveryMap[lookupId].value;
   if (!original) {
-    throw new Error('No original data found for ' + id)
+    throw new Error('No original data found for ' + id);
   }
-  const calculatedValue = id.includes('CES') ? // a ternary that can be converted back to an if statement
-    Number(current) / Number(original):
-    Number(current) / Number(original) - 1;
+  const calculatedValue = id.includes('CES') // a ternary that can be converted back to an if statement
+    ? Number(current) / Number(original)
+    : Number(current) / Number(original) - 1;
 
   return calculatedValue.toFixed(9); // to mimic precision of excel documents
 }
@@ -22,9 +23,10 @@ function calculateRecoveryPercentage(id, current) {
 /* Employment Calculations */
 const getEmploymentValue = row => {
   if (!row.calculations) {
-    return row.value
+    return row.value;
   }
-  return row.calculations.net_changes[12] ||
+  return (
+    row.calculations.net_changes[12] ||
     // some values early in the employment dataset do not have the 12
     // therefore we're getting whatever value there *does* exist.
     // TODO discover if this is appropriate, or if this data needs to be ignored
@@ -32,7 +34,8 @@ const getEmploymentValue = row => {
     row.calculations.net_changes[6] ||
     row.calculations.net_changes[3] ||
     row.calculations.net_changes[1]
-}
+  );
+};
 
 function multiply(a, b) {
   const p = 100;
@@ -41,31 +44,40 @@ function multiply(a, b) {
 /* End Employment Calculations */
 
 function performTransaction(txt) {
-  return new Promise( (resolve, reject) => {
+  return new Promise((resolve, reject) => {
     db.serialize(() => {
       db.runBatchAsync(txt)
-      .then(results => {
-        resolve(results)
-      })
-      .catch(err => {
-        reject(err)
-      })
+        .then(results => {
+          resolve(results);
+        })
+        .catch(err => {
+          reject(err);
+        });
     });
-  })
+  });
 }
 
 module.exports = {
-  recovery: (data) => {
-    const transformFunction = (val, id) => calculateRecoveryPercentage(id, getRecoveryValue(val))
-    const transaction = createTransaction('recovery_data', transformFunction, data)
-    return performTransaction(transaction)
+  recovery: data => {
+    const transformFunction = (val, id) =>
+      calculateRecoveryPercentage(id, getRecoveryValue(val));
+    const transaction = createTransaction(
+      'recovery_data',
+      transformFunction,
+      data
+    );
+    return performTransaction(transaction);
   },
-  employment: (data) => {
-    const transformFunction = val => multiply(getEmploymentValue(val), 1000)
-    const transaction = createTransaction('employment_data', transformFunction, data)
-    return performTransaction(transaction)
+  employment: data => {
+    const transformFunction = val => multiply(getEmploymentValue(val), 1000);
+    const transaction = createTransaction(
+      'employment_data',
+      transformFunction,
+      data
+    );
+    return performTransaction(transaction);
   }
-}
+};
 
 if (process.env.NODE_ENV === 'test') {
   const functions = Object.keys(module.exports);

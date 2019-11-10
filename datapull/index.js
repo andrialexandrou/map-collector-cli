@@ -1,4 +1,4 @@
-const performPullAndDataStore = require('./procedure')
+const performPullAndDataStore = require('./procedure');
 
 if (process.env.NODE_ENV !== 'test') {
   const argv = require('yargs')
@@ -9,8 +9,7 @@ if (process.env.NODE_ENV !== 'test') {
       choices: [2017, 2018, 2019]
     })
     .demandOption(['year'])
-    .help()
-    .argv;
+    .help().argv;
 
-  performPullAndDataStore(argv)
+  performPullAndDataStore(argv);
 }

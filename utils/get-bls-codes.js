@@ -5,7 +5,7 @@ const fs = require('fs');
 const chunk = require('lodash.chunk');
 
 /* internal documents */
-const seriesPromise = require('../data/quick-scripts/get-cities')
+const seriesPromise = require('../data/quick-scripts/get-cities');
 
 /* constants particular to this project */
 const jobsPrefix = 'SMU';
@@ -27,25 +27,27 @@ function applyPrefix(prefix, number) {
 }
 
 function getIds() {
-  return new Promise( resolve => {
-    seriesPromise.then(series => {
-      const matrixOfSeries = chunk(series, apiMultipleSeriesLimit);
-      matrixOfSeries.forEach(series => {
-        matrixWithJobsPrefix.push(
-          series.map(number => applyPrefix(jobsPrefix, number))
-        );
-        matrixWithRecoveryPrefix.push(
-          series.map(number => applyPrefix(recoveryPrefix, number))
-        );
-      });
-      resolve({
-        recovery: matrixWithRecoveryPrefix,
-        employment: matrixWithJobsPrefix
+  return new Promise(resolve => {
+    seriesPromise
+      .then(series => {
+        const matrixOfSeries = chunk(series, apiMultipleSeriesLimit);
+        matrixOfSeries.forEach(series => {
+          matrixWithJobsPrefix.push(
+            series.map(number => applyPrefix(jobsPrefix, number))
+          );
+          matrixWithRecoveryPrefix.push(
+            series.map(number => applyPrefix(recoveryPrefix, number))
+          );
+        });
+        resolve({
+          recovery: matrixWithRecoveryPrefix,
+          employment: matrixWithJobsPrefix
+        });
       })
-    }).catch( err => {
-      throw new Error(err)
-    })
-  })
+      .catch(err => {
+        throw new Error(err);
+      });
+  });
 }
 
 module.exports = getIds();
