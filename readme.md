@@ -11,6 +11,15 @@ npm run datapull -- --year 2019
 npm run export
 ```
 
+### Adding a city
+> Prerequisite: Have sqlite interface set up on your local machine
+
+in your sqlite terminal:
+```sql
+INSERT INTO cities (id, lat, lon, name) VALUES ('234540000092', '123', '456', 'Example City, TN');
+```
+Note: the `id` value should be stripped of its 3-character non-numeric prefix. We add those on request to get relevant data from BLS. You will need to find the latitude and longitude from another service.
+
 ### Sharing data with someone else to run the program
 ```bash
 git add .
@@ -52,7 +61,7 @@ If collaborating with another person, communicate the change as needed.
 
 ### Getting Started
 
-```
+```bash
 npm install
 ```
 
