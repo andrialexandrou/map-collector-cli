@@ -1,3 +1,10 @@
+const db = require('../../datapull/db-config.js');
+const obj = {};
+
+if (process.env.NODE_ENV === 'test') {
+  return;
+}
+
 db.serialize(() => {
   // db.serialize(() => {
   db.all(
