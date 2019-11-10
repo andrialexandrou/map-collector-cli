@@ -2,6 +2,7 @@ const fs = require('fs');
 const Path = require('path');
 const stringify = require('csv-stringify');
 const sqlite3 = require('sqlite3').verbose();
+const remove = require('lodash.remove');
 
 module.exports = {
   getPeriodName
@@ -61,6 +62,10 @@ function flattenAndSave(filename, data) {
   const list = Object.keys(data).map(id => {
     return data[id];
   });
+  if (filename === 'recovery') {
+    const americaObj = remove(list, row => row.city_id.includes('CES'))[0];
+    list.push(americaObj);
+  }
   list.forEach(city => {
     delete city.city_id;
   });
