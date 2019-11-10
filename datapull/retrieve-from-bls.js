@@ -1,32 +1,55 @@
 const makeRequest = require('../utils/make-request');
 const flatten = require('lodash.flatten');
 const getBlsCodesPromise = require('../utils/get-bls-codes');
-const remove = require('lodash.remove')
+const remove = require('lodash.remove');
 
 function isRelevant(pullname) {
   if (pullname === 'employment') {
-    return obj => parseInt(obj.year, 10) >= 1999
+    return obj => parseInt(obj.year, 10) >= 1999;
   }
   if (pullname === 'recovery') {
-    const first = 'Dec-07'
-    return function (obj) {
-      return parseInt(obj.year, 10) === 2007 ?
-        obj.period === 'M12' :
-        parseInt(obj.year, 10) >= 2008;
-    }
+    return function(obj) {
+      return parseInt(obj.year, 10) === 2007
+        ? obj.period === 'M12'
+        : parseInt(obj.year, 10) >= 2008;
+    };
   }
 }
 isRelevant.test = function() {
-  console.assert(isRelevant('employment')({year: '1998', period: 'M01'}) === false, 'M01 1998 should be irrelevant')
-  console.assert(isRelevant('employment')({year: '1998', period: 'M12'}) === false, 'M12 1998 should be irrelevant')
-  console.assert(isRelevant('employment')({year: '1999', period: 'M01'}) === true, 'M01 1999 should be relevant')
-  console.assert(isRelevant('employment')({year: '1999', period: 'M12'}) === true, 'M12 1999 should be relevant')
+  console.assert(
+    isRelevant('employment')({ year: '1998', period: 'M01' }) === false,
+    'M01 1998 should be irrelevant'
+  );
+  console.assert(
+    isRelevant('employment')({ year: '1998', period: 'M12' }) === false,
+    'M12 1998 should be irrelevant'
+  );
+  console.assert(
+    isRelevant('employment')({ year: '1999', period: 'M01' }) === true,
+    'M01 1999 should be relevant'
+  );
+  console.assert(
+    isRelevant('employment')({ year: '1999', period: 'M12' }) === true,
+    'M12 1999 should be relevant'
+  );
 
-  console.assert(isRelevant('recovery')({year: '2007', period: 'M11'}) === false, 'M11 2007 should be irrelevant')
-  console.assert(isRelevant('recovery')({year: '2007', period: 'M12'}) === true, 'M12 2007 should be relevant')
-  console.assert(isRelevant('recovery')({year: '2008', period: 'M05'}) === true, 'M05 2008 should be relevant')
-  console.assert(isRelevant('recovery')({year: '2017', period: 'M06'}) === true, 'M06 2017 should be relevant')
-}
+  console.assert(
+    isRelevant('recovery')({ year: '2007', period: 'M11' }) === false,
+    'M11 2007 should be irrelevant'
+  );
+  console.assert(
+    isRelevant('recovery')({ year: '2007', period: 'M12' }) === true,
+    'M12 2007 should be relevant'
+  );
+  console.assert(
+    isRelevant('recovery')({ year: '2008', period: 'M05' }) === true,
+    'M05 2008 should be relevant'
+  );
+  console.assert(
+    isRelevant('recovery')({ year: '2017', period: 'M06' }) === true,
+    'M06 2017 should be relevant'
+  );
+};
 
 module.exports = {
   isRelevant,
@@ -69,7 +92,6 @@ module.exports = {
       });
   }
 };
-
 
 if (process.env.NODE_ENV === 'test') {
   const functions = Object.keys(module.exports);
