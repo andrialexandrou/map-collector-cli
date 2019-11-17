@@ -67,7 +67,12 @@ module.exports = {
         return Promise.all(recoveryCodes.map(arr => makeRequest(arr, opts)));
       })
       .then(flatten)
-      .then(arr => arr.filter(isRelevant('recovery')))
+      .then(arr => {
+        return arr.map(series => {
+          series.data = series.data.filter(isRelevant('employment'))
+          return series
+        })
+      })
       .catch(err => {
         throw new Error(err);
       });
@@ -86,7 +91,12 @@ module.exports = {
         return Promise.all(employmentCodes.map(arr => makeRequest(arr, opts)));
       })
       .then(flatten)
-      .then(arr => arr.filter(isRelevant('employment')))
+      .then(arr => {
+        return arr.map(series => {
+          series.data = series.data.filter(isRelevant('employment'))
+          return series
+        })
+      })
       .catch(err => {
         throw new Error(err);
       });
