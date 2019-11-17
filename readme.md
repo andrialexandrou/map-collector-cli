@@ -50,7 +50,36 @@ We use Version 2.0 of the BLS API. The Bureau of Labor Statistics expires keys o
 
 If collaborating with another person, communicate the change as needed.
 
-[Link to the BLS Registration engine can be found here.](https://data.bls.gov/registrationEngine/) 
+[Link to the BLS Registration engine can be found here.](https://data.bls.gov/registrationEngine/)
+
+File structure for adding your own keys:
+```json
+{
+  "keys": [
+    {
+      "name": "your-email+some-reference-1@gmail.com",
+      "key": "abcxxxxxxxxxxxxxxxxxxxxxxxxxx123"
+    },
+    {
+      "name": "your-email+some-reference-2@gmail.com",
+      "key": "abcxxxxxxxxxxxxxxxxxxxxxxxxxx123"
+    },
+    {
+      "name": "your-email+some-reference-3@gmail.com",
+      "key": "abcxxxxxxxxxxxxxxxxxxxxxxxxxx123"
+    },
+    {
+      "name": "your-email+some-reference-4@gmail.com",
+      "key": "abcxxxxxxxxxxxxxxxxxxxxxxxxxx123"
+    },
+    {
+      "name": "your-email+some-reference-5@gmail.com",
+      "key": "abcxxxxxxxxxxxxxxxxxxxxxxxxxx123"
+    }
+  ],
+  "index": 0
+}
+```
 
 ## Development
 
