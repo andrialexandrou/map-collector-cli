@@ -209,6 +209,7 @@ function getIdName(id) {
 
 function createBigInsert(tableName, transformFunction, row) {
   function createInsert(id, period, value) {
+    if (!id || !period || !value) return
     return `INSERT INTO ${tableName} (city_id, period, value) VALUES( "${getIdName(
       id
     )}", "${period}", "${value}" ) ON CONFLICT (city_id, period) DO UPDATE SET value=${value}, period="${period}";`;

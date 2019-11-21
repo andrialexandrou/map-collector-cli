@@ -1,16 +1,18 @@
 const db = require('./db-config');
 const originalRecoveryMap = require('../utils/initialRecessionJobsCount');
 const { createTransaction } = require('../utils/create-transaction');
+const uniq = require('lodash/uniq')
 
 /* Recovery Calculations */
 const getRecoveryValue = row => row.value;
-
+const nonexistentRecoveryJobs = []
 function calculateRecoveryPercentage(id, current) {
   const lookupId = id.includes('CES') ? id : id.slice(3);
   const original =
     originalRecoveryMap[lookupId] && originalRecoveryMap[lookupId].value;
   if (!original) {
-    throw new Error('No original data found for ' + id);
+    nonexistentRecoveryJobs.push(lookupId)
+    return;
   }
   const calculatedValue = id.includes('CES') // a ternary that can be converted back to an if statement
     ? Number(current) / Number(original)
@@ -66,6 +68,8 @@ module.exports = {
       transformFunction,
       data
     );
+
+    console.log('Could not find recovery data for:', '\n', uniq(nonexistentRecoveryJobs).join('\n'))
     return performTransaction(transaction);
   },
   employment: data => {
