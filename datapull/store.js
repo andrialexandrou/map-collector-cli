@@ -1,7 +1,7 @@
 const db = require('./db-config');
 const originalRecoveryMap = require('../utils/initialRecessionJobsCount');
 const { createTransaction } = require('../utils/create-transaction');
-const uniq = require('lodash/uniq')
+const uniq = require('lodash.uniq')
 
 /* Recovery Calculations */
 const getRecoveryValue = row => row.value;
